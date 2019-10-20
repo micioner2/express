@@ -7,7 +7,10 @@ const router = routerx();
 router.post('/add',auth.verifyAlmacenero,ingresoController.add)
 router.get('/query',auth.verifyAlmacenero,ingresoController.query)
 router.get('/list',auth.verifyAlmacenero,ingresoController.list)
+router.get('/grafico12meses',auth.verifyUsuario,ingresoController.grafico12Meses)
+router.get('/consultaFechas',auth.verifyUsuario,ingresoController.consultaFechas)
 router.put('/activate',auth.verifyAlmacenero,ingresoController.activate)
 router.put('/deactivate',auth.verifyAlmacenero,ingresoController.deactivate)
+router.get('/list',auth.verifyAlmacenero,ingresoController.list)
 
 export default router;
